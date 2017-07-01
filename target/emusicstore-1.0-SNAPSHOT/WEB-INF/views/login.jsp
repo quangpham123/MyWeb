@@ -26,7 +26,7 @@
 
                 <input type="submit" value="Submit" class="btn btn-default">
                 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
-                <div class="fb-login-button" data-max-rows="1" data-size="medium" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
+                <%--<div class="fb-login-button" data-max-rows="1" data-size="medium" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>--%>
 
             </form>
 

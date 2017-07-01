@@ -20,7 +20,7 @@
     <title>My Music Store</title>
 
     <!-- Angular JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js" > </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
 
     <%--Jquery--%>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -44,65 +44,10 @@
 <!-- NAVBAR
 ================================================== -->
 <body>
-<script>
-    //load cac thanh phan can thiet
-    window.fbAsyncInit = function() {
-        FB.init({
-            appId      : '1837896446537490',
-            cookie     : true,  // enable cookies to allow the server to access
-                                // the session
-            xfbml      : true,  // parse social plugins on this page
-            version    : 'v2.8' // use graph api version 2.8
-        });
 
-        // Now that we've initialized the JavaScript SDK, we call
-        // FB.getLoginStatus().  This function gets the state of the
-        // person visiting this page and can return one of three states to
-        // the callback you provide.  They can be:
-        //
-        // 1. Logged into your app ('connected')
-        // 2. Logged into Facebook, but not your app ('not_authorized')
-        // 3. Not logged into Facebook and can't tell if they are logged into
-        //    your app or not.
-        //
-        // These three cases are handled in the callback function.
-        //kiem tra trang thai hien tai
-        FB.getLoginStatus(function(response) {
-            statusChangeCallback(response);
-        });
+<%--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>--%>
 
-    };
 
-    //Xu ly trang thai dang nhap
-    function statusChangeCallback(response) {
-//        console.log('statusChangeCallback');
-//        console.log(response);
-        // The response object is returned with a status field that lets the
-        // app know the current login status of the person.
-        // Full docs on the response object can be found in the documentation
-        // for FB.getLoginStatus().
-        if (response.status === 'connected') {
-            // Logged into your app and Facebook.
-            alert("You login successfully.")
-        } else {
-            // The person is not logged into your app or we are unable to tell.
-            document.getElementById('status').innerHTML = 'Please log ' +
-                'into this app.';
-        }
-    }
-
-    function loginFacebook() {
-        <c:url value="/j_spring_security_check"/>
-    }
-</script>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9&appId=619370734932585";
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 <div class="navbar-wrapper">
     <div class="container">
 
@@ -136,8 +81,8 @@
                             </c:if>
                         </c:if>
                         <c:if test="${pageContext.request.userPrincipal.name  == null}">
-                        <li><a href="<c:url value="/login/" />">Login</a></li>
-                        <li><a href="<c:url value="/register" />">Register</a></li>
+                            <li><a href="<c:url value="/login/" />">Login</a></li>
+                            <li><a href="<c:url value="/register" />">Register</a></li>
                         </c:if>
                     </ul>
                 </div>
